@@ -1,0 +1,110 @@
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 120px; /* space for fixed header */
+    background: #f5f5f5;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #0b2a55;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 8px;
+    white-space: nowrap;
+}
+header nav a:hover { color: #ffae00; }
+
+/* Logo */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo-section h1 { font-size: 36px; margin:0; }
+.logo-section p { margin:0; font-size:14px; }
+.logo { width: 60px; height: auto; border-radius: 5px; }
+
+/* Sections */
+section { padding: 60px 20px; background: white; margin: 20px; border-radius: 10px; text-align: center; }
+
+/* Home Banner */
+.banner { display: flex; justify-content: center; margin-top: 20px; }
+.banner .block { padding: 15px 30px; margin:5px; color:white; font-weight:bold; border-radius:8px; font-size:22px; }
+.skill { background:#f1b000; } .discipline { background:#004c99; }
+.tagline { margin-top:20px; font-size:24px; font-weight:bold; color:#8a1f1f; }
+
+/* Features Grid */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:25px; }
+.feature-card { background:white; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:0.3s; }
+.feature-card:hover { transform:translateY(-6px); box-shadow:0 6px 16px rgba(0,0,0,0.25); }
+.feature-card h3 { font-size:20px; color:#002f6c; margin-bottom:10px; }
+.feature-card p { font-size:16px; color:#333; }
+
+/* Gallery */
+.gallery-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.gallery-item img { width:100%; border-radius:10px; transition: transform 0.4s ease; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* Courses */
+.course-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.course-card { background:#f0f6ff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:0.3s; }
+.course-card:hover { transform:translateY(-6px); box-shadow:0 6px 16px rgba(0,0,0,0.25); }
+.course-card h3 { font-size:18px; color:#002f6c; margin-bottom:10px; }
+.course-card button { padding:10px 15px; background:#003f88; color:white; border:none; border-radius:6px; cursor:pointer; transition:0.3s; }
+.course-card button:hover { background:#ffae00; color:#000; }
+
+/* Contact */
+.contact-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+.contact-info, .contact-form { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:left; }
+.contact-info h3, .contact-form h3 { color:#002f6c; margin-bottom:15px; }
+.contact-form input, .contact-form textarea { width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px; }
+.contact-form button { width:100%; padding:12px; background:#003f88; color:white; border:none; border-radius:6px; cursor:pointer; transition:0.3s; }
+.contact-form button:hover { background:#ffae00; color:black; }
+
+/* Floating Buttons */
+a { text-decoration:none; color:white; font-size:20px; padding:12px; border-radius:50px; display:inline-flex; align-items:center; justify-content:center; transition:transform 0.2s; }
+a:hover { transform:scale(1.2); }
+.phone-btn { background:#007BFF; position:fixed; bottom:220px; right:20px; z-index:1000; }
+.gmail-btn { background:#D44638; position:fixed; bottom:170px; right:20px; z-index:1000; }
+.map-btn { background:#4285F4; position:fixed; bottom:120px; right:20px; z-index:1000; }
+.whatsapp-btn { background:#25D366; position:fixed; bottom:70px; right:20px; z-index:1000; }
+.call-btn { background:#FF4B2B; position:fixed; bottom:20px; right:20px; z-index:1000; }
+
+/* Media Queries for smaller devices */
+@media screen and (max-width:768px){
+    header nav { justify-content:center; gap:8px; }
+    .logo-section h1 { font-size:28px; }
+    .logo-section p { font-size:12px; }
+    .feature-card h3, .course-card h3 { font-size:16px; }
+    .feature-card p, .course-card button { font-size:14px; }
+}
+
+@media screen and (max-width:480px){
+    body { padding-top:140px; }
+    .feature-card, .course-card { padding:15px; }
+    .features-grid, .course-grid { gap:15px; }
+    header nav a { font-size:14px; padding:4px 6px; }
+}
