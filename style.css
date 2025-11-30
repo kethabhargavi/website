@@ -43,8 +43,8 @@ header nav a:hover { color: #ffae00; }
     align-items: center;
     gap: 15px;
 }
-.logo-section h1 { font-size: 36px; margin:0; }
-.logo-section p { margin:0; font-size:14px; }
+.logo-section h1 { font-size: 36px; margin:0; color:#fff; }
+.logo-section p { margin:0; font-size:14px; color:#fff; }
 .logo { width: 60px; height: auto; border-radius: 5px; }
 
 /* Sections */
@@ -108,3 +108,4 @@ a:hover { transform:scale(1.2); }
     .features-grid, .course-grid { gap:15px; }
     header nav a { font-size:14px; padding:4px 6px; }
 }
+
