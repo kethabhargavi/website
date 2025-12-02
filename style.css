@@ -63,10 +63,128 @@ section { padding: 60px 20px; background: white; margin: 20px; border-radius: 10
 .feature-card h3 { font-size:20px; color:#002f6c; margin-bottom:10px; }
 .feature-card p { font-size:16px; color:#333; }
 
-/* Gallery */
-.gallery-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
-.gallery-item img { width:100%; border-radius:10px; transition: transform 0.4s ease; }
-.gallery-item:hover img { transform: scale(1.05); }
+/* Modern Gallery */
+.gallery-container {
+  padding: 40px;
+  background: #f8f9fa;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img, .gallery-grid video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover,
+.gallery-grid video:hover {
+  transform: scale(1.05);
+}
+
+.media-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.media-videos video {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.get-started-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.get-started-btn:hover {
+    background: #0055aa;
+}
+
+.auth-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.auth-buttons a {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.login-btn {
+    background: #ffffff;
+    border: 2px solid #003366;
+    color: #003366;
+}
+
+.login-btn:hover {
+    background: #003366;
+    color: #fff;
+}
+
+.register-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.register-btn:hover {
+    background: #e68900;
+}
+
+
+
+/* Lightbox Popup */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img, .lightbox video {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
 
 /* Courses */
 .course-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
@@ -92,6 +210,46 @@ a:hover { transform:scale(1.2); }
 .map-btn { background:#4285F4; position:fixed; bottom:120px; right:20px; z-index:1000; }
 .whatsapp-btn { background:#25D366; position:fixed; bottom:70px; right:20px; z-index:1000; }
 .call-btn { background:#FF4B2B; position:fixed; bottom:20px; right:20px; z-index:1000; }
+
+
+.auth-page {
+    max-width: 400px;
+    margin: 70px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-page h2 {
+    margin-bottom: 20px;
+}
+
+.auth-page form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.auth-page button {
+    width: 100%;
+    padding: 12px;
+    background: #003366;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-page button:hover {
+    background: #0055aa;
+}
+
 
 /* Media Queries for smaller devices */
 @media screen and (max-width:768px){
